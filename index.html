@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI اردو اُستاد | ہیتھم اکیڈمی پسرور - آسان اردو میں AI سیکھیں</title>
+    <meta name="description" content="AI اردو اُستاد (ہیتھم اکیڈمی پسرور) — یکم دسمبر سے AI لرننگ کورس کا آغاز۔ AI کی بنیادی باتیں، تصاویر، ویڈیوز، ویب پیجز اور گیمز بنانا آسان اردو میں سیکھیں۔">
+    
+    <!-- Google Fonts: Noto Nastaliq Urdu, Noto Sans Urdu & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Urdu:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nastaliq: ['"Noto Nastaliq Urdu"', 'serif'],
+                        urdu: ['"Noto Sans Urdu"', '"Plus Jakarta Sans"', 'sans-serif'],
+                        en: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0A4396',
+                            deep: '#072F6B',
+                            navy: '#0F172A',
+                            amber: '#F5A623',
+                            gold: '#FFB300',
+                            sky: '#F4F8FB',
+                            ice: '#EBF3FA',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(10, 67, 150, 0.10)',
+                        'card': '0 4px 24px -2px rgba(15, 23, 42, 0.06)',
+                        'glow': '0 10px 30px -5px rgba(245, 166, 35, 0.45)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Nastaliq Line Height & Spacing Fixes */
+        body {
+            font-family: 'Noto Sans Urdu', 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+            overflow-x: hidden;
+        }
+
+        .font-nastaliq {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 2.15 !important;
+        }
+
+        .hero-heading {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 1.95 !important;
+        }
+
+        /* Reference Hero Background Gradient */
+        .hero-bg {
+            background: radial-gradient(circle at 15% 25%, rgba(255, 243, 219, 0.65) 0%, rgba(244, 248, 251, 0.95) 45%, #FFFFFF 100%);
+        }
+
+        /* Golden Brush Underline matching reference image */
+        .urdu-underline {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .urdu-underline::after {
+            content: '';
+            position: absolute;
+            bottom: 12px;
+            right: -4px;
+            left: -4px;
+            height: 14px;
+            background: linear-gradient(90deg, #F5A623 0%, #FFD166 100%);
+            border-radius: 999px;
+            z-index: -1;
+            opacity: 0.92;
+        }
+
+        @media (max-width: 640px) {
+            .urdu-underline::after {
+                bottom: 8px;
+                height: 10px;
+            }
+        }
+
+        /* Subtle Floating Animations for Bento Badges */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        @keyframes floatDelayed {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-float {
+            animation: floatSlow 4.5s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: floatDelayed 5.2s ease-in-out 1.2s infinite;
+        }
+
+        /* Frosted Glass Pill */
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0A4396;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-amber/30 selection:text-brand-navy">
+
+    <!-- Top Announcement Strip -->
+    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+                <span class="inline-flex items-center gap-1.5 bg-brand-amber text-brand-navy font-bold px-2.5 py-0.5 rounded-full text-xs">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+                    داخلے جاری ہیں
+                </span>
+                <span class="font-medium text-slate-100">
+                    نئے AI لرننگ کورس کا آغاز <strong class="text-brand-gold font-bold">یکم دسمبر</strong> سے — پہلے 10 سٹوڈنٹس کے لیے <strong class="text-brand-gold font-bold">50% خصوصی ڈسکاؤنٹ!</strong>
+                </span>
+            </div>
+            <div class="hidden md:flex items-center gap-4 text-xs text-slate-300 font-en" dir="ltr">
+                <a href="tel:03217181315" class="hover:text-brand-gold transition flex items-center gap-1.5">
+                    <span>📞 0321-7181315</span>
+                </a>
+                <span>•</span>
+                <span>Pasrur, Pakistan</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/70 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo (Right Side in RTL) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <!-- Custom AI Ustaad Logo Badge -->
+                    <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-navy flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Graduation Cap -->
+                            <path d="M32 8L6 20L32 32L58 20L32 8Z" fill="#FFB300"/>
+                            <path d="M52 23V35C52 35 44 41 32 41C20 41 12 35 12 35V23" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M56 21V33" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Friendly AI Robot Face / Book Base -->
+                            <rect x="20" y="43" width="24" height="13" rx="6.5" fill="#FFFFFF"/>
+                            <circle cx="27" cy="49.5" r="2.2" fill="#0A4396"/>
+                            <circle cx="37" cy="49.5" r="2.2" fill="#0A4396"/>
+                            <path d="M30 52.5C31 53.5 33 53.5 34 52.5" stroke="#F5A623" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="absolute -bottom-1 -left-1 bg-brand-amber text-brand-navy text-[9px] font-en font-extrabold px-1.5 py-0.2 rounded-md shadow">AI</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-xl sm:text-2xl font-extrabold text-brand-navy tracking-tight">AI <span class="text-brand-blue">اردو اُستاد</span></span>
+                        </div>
+                        <span class="text-[11px] sm:text-xs font-medium text-slate-500">ہیتھم اکیڈمی پسرور • <span class="font-en text-brand-blue font-semibold">Haytham Academy</span></span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-[15px] font-semibold text-slate-700">
+                    <a href="#modules" class="hover:text-brand-blue transition py-2">کورس تفصیلات</a>
+                    <a href="#how-we-teach" class="hover:text-brand-blue transition py-2">ہم کیسے سکھاتے ہیں</a>
+                    <a href="#channels" class="hover:text-brand-blue transition py-2">یوٹیوب اور سوشل میڈیا</a>
+                    <a href="#ecommerce" class="hover:text-brand-blue transition py-2">ای کامرس کورسز</a>
+                    <a href="#instructors" class="hover:text-brand-blue transition py-2">اساتذہ اور رابطہ</a>
+                    <a href="#faq" class="hover:text-brand-blue transition py-2">سوالات</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Trigger (Left Side in RTL) -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openRegModal('AI لرننگ کورس (یکم دسمبر بیچ)')" class="bg-gradient-to-l from-brand-amber to-brand-gold hover:from-brand-gold hover:to-brand-amber text-brand-navy font-bold text-sm sm:text-base px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-glow transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
+                        رجسٹریشن کروائیں
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" aria-label="مینو کھولیں" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 shadow-xl">
+            <div class="flex flex-col space-y-2 text-base font-semibold text-slate-700">
+                <a href="#modules" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">کورس تفصیلات</a>
+                <a href="#how-we-teach" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">ہم کیسے سکھاتے ہیں</a>
+                <a href="#channels" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">یوٹیوب چینلز اور فیس بک</a>
+                <a href="#ecommerce" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">آن کمنگ ای کامرس کورسز</a>
+                <a href="#instructors" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">اساتذہ اور رابطہ</a>
+                <a href="#faq" class="mobile-link px-4 py-3 rounded-xl hover:bg-brand-sky hover:text-brand-blue transition">اکثر پوچھے گئے سوالات</a>
+                <div class="pt-2">
+                    <button onclick="openRegModal('AI لرننگ کورس (یکم دسمبر بیچ)')" class="w-full bg-brand-amber text-brand-navy font-bold py-3.5 rounded-full shadow-md">
+                        ابھی رجسٹریشن کروائیں (50% ڈسکاؤنٹ)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Inspired by onlineaischool.com split asymmetric layout) -->
+    <section class="hero-bg pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+                
+                <!-- RIGHT COLUMN: Expressive Nastaliq Urdu Typography & CTAs (7 cols on lg) -->
+                <div class="lg:col-span-6 xl:col-span-6 text-right space-y-6">
+                    
+                    <!-- Top Pulsing Pill Badge -->
+                    <div class="inline-flex items-center gap-2.5 bg-white border border-slate-200/90 shadow-sm px-4 py-2 rounded-full">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-800">ہیتھم اکیڈمی پسرور کا نیا تعلیمی منصوبہ</span>
+                    </div>
+
+                    <!-- Main Nastaliq Urdu Headline matching reference -->
+                    <h1 class="hero-heading text-4xl sm:text-5xl xl:text-[62px] font-bold text-brand-navy tracking-normal">
+                        <span class="block text-brand-navy"><span class="font-en font-extrabold text-brand-blue">AI</span> سیکھیں،</span>
+                        <span class="block text-brand-blue mt-1 sm:mt-2">
+                            آسان <span class="urdu-underline">اردو</span> میں
+                        </span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-medium">
+                        طلبہ، والدین، اساتذہ اور کاروباری حضرات کے لیے عملی <span class="font-en font-bold text-brand-blue">AI</span> تعلیم — 
+                        <strong class="text-slate-800">AI کی بنیادی باتیں، تصاویر، ویڈیوز، ویب پیجز اور گیمز بنانا</strong> سیکھیں۔ لائیو کلاسز، اصل پروجیکٹس، اور ہر قدم پر مکمل رہنمائی۔
+                    </p>
+
+                    <!-- Important Date & Discount Highlight Pill -->
+                    <div class="inline-flex flex-wrap items-center gap-3 bg-brand-navy text-white px-4 py-3 rounded-2xl shadow-soft border border-brand-blue/30">
+                        <span class="bg-brand-amber text-brand-navy text-xs font-extrabold px-3 py-1 rounded-full">
+                            نیا بیچ
+                        </span>
+                        <span class="text-sm sm:text-base font-bold text-amber-300">
+                            یکم دسمبر سے کلاسز کا آغاز
+                        </span>
+                        <span class="text-slate-400 hidden sm:inline">|</span>
+                        <span class="text-xs sm:text-sm text-slate-200 font-medium">
+                            رجسٹریشن ابھی سے جاری ہے
+                        </span>
+                    </div>
+
+                    <!-- Primary & Secondary CTA Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-1">
+                        <button onclick="openRegModal('AI لرننگ کورس - یکم دسمبر بیچ')" class="inline-flex items-center justify-center gap-3 bg-gradient-to-l from-brand-amber to-brand-gold hover:from-brand-gold hover:to-brand-amber text-brand-navy font-extrabold text-base sm:text-lg px-7 py-4 rounded-full shadow-glow transition-all transform hover:-translate-y-0.5 cursor-pointer">
+                            <span>مفت ڈیمو / رجسٹریشن کریں</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                        </button>
+
+                        <a href="#modules" class="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-brand-navy font-bold text-base sm:text-lg px-7 py-4 rounded-full border-2 border-slate-200 hover:border-brand-blue/40 shadow-sm transition-all">
+                            کورس ماڈیولز دیکھیں
+                        </a>
+                    </div>
+
+                    <!-- Bottom 3-Column Metrics Row (Matching reference layout) -->
+                    <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg">
+                        <div>
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-brand-navy">یکم دسمبر</div>
+                            <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">نئے بیچ کا آغاز</div>
+                        </div>
+                        <div class="border-r border-slate-200 pr-4 sm:pr-6">
+                            <div class="text-2xl sm:text-3xl font-en font-extrabold text-brand-blue" dir="ltr">50% OFF</div>
+                            <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">پہلے 10 سٹوڈنٹس کے لیے</div>
+                        </div>
+                        <div class="border-r border-slate-200 pr-4 sm:pr-6">
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-brand-navy">کوئی قید نہیں</div>
+                            <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">عمر کی کوئی پابندی نہیں</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEFT COLUMN: Asymmetric 3-Card Bento Photo Collage with Floating Badges -->
+                <div class="lg:col-span-6 xl:col-span-6 relative">
+                    <!-- Decorative Soft Glow behind collage -->
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-blue/10 via-brand-amber/10 to-transparent rounded-3xl blur-2xl -z-10"></div>
+
+                    <!-- Asymmetric Bento Grid (LTR internal grid to replicate exact visual geometry of reference) -->
+                    <div class="grid grid-cols-12 gap-3.5 sm:gap-4 items-stretch relative" dir="ltr">
+                        
+                        <!-- Left Stack (2 smaller rounded cards) -->
+                        <div class="col-span-5 flex flex-col gap-3.5 sm:gap-4">
+                            <!-- Card 1: Student creating AI Videos / Recording -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-card border-2 border-white h-48 sm:h-56 group">
+                                <img 
+                                    src="https://images.pexels.com/photos/7972536/pexels-photo-7972536.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x450/0A4396/FFFFFF?text=AI+Videos';"
+                                    alt="نوجوان طالب علم لیپ ٹاپ پر AI ویڈیوز اور مواد بناتے ہوئے" 
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/65 via-transparent to-transparent"></div>
+                                <!-- Dark Bottom Pill Badge -->
+                                <div class="absolute bottom-3 right-3 bg-slate-900/85 backdrop-blur-md text-white text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full border border-white/15 shadow-lg" dir="rtl">
+                                    AI ویڈیوز اور تصاویر
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Student building Websites -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-card border-2 border-white h-48 sm:h-56 group">
+                                <img 
+                                    src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x450/0F172A/FFFFFF?text=Webpages+%26+Apps';"
+                                    alt="طالبہ لیپ ٹاپ پر ویب سائٹس اور ایپس ڈیزائن کرتے ہوئے" 
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"></div>
+                                <!-- Dark Bottom Pill Badge -->
+                                <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full border border-white/15 shadow-lg" dir="rtl">
+                                    ویب سائٹس اور ایپس
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Tall Main Card (Digital Art / AI Creator) -->
+                        <div class="col-span-7 relative">
+                            <div class="relative rounded-3xl overflow-hidden shadow-soft border-2 border-white h-full min-h-[395px] sm:min-h-[464px] group">
+                                <img 
+                                    src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=900" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/550x700/0A4396/FFB300?text=AI+Creator';"
+                                    alt="طالبہ ڈیجیٹل ٹیبلیٹ پر AI آرٹ اور تخلیقی ڈیزائن بناتے ہوئے" 
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-transparent"></div>
+
+                                <!-- Floating Top-Right Frosted Badge: AI Creator بنیں ✨ -->
+                                <div class="glass-pill animate-float absolute top-4 right-4 px-4 py-2 rounded-full flex items-center gap-2 z-10" dir="rtl">
+                                    <span class="text-amber-500 text-base">✨</span>
+                                    <span class="text-xs sm:text-sm font-extrabold text-brand-navy"><span class="font-en text-brand-blue">AI Creator</span> بنیں</span>
+                                </div>
+
+                                <!-- Inset Bottom-Right Mini Card Overlay (Games & Mobile Apps) -->
+                                <div class="hidden sm:block absolute bottom-4 right-4 w-36 h-32 rounded-2xl overflow-hidden border-[3px] border-white shadow-xl">
+                                    <img 
+                                        src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=500" 
+                                        onerror="this.onerror=null;this.src='https://placehold.co/250x220/F5A623/0F172A?text=AI+Games';"
+                                        alt="موبائل اور لیپ ٹاپ پر AI گیمز اور ایپس بنانا" 
+                                        class="w-full h-full object-cover"
+                                    >
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full" dir="rtl">
+                                        گیمز اور ایپس
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center Floating Frosted Glass Pill Badge: لائیو اور آن لائن کلاسز -->
+                        <div class="glass-pill animate-float-delayed absolute top-1/2 left-[38%] -translate-x-1/2 -translate-y-1/2 px-4 py-2.5 rounded-full flex items-center gap-2.5 z-20 whitespace-nowrap" dir="rtl">
+                            <span class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                            </span>
+                            <span class="text-xs sm:text-sm font-extrabold text-brand-navy">لائیو اور آن لائن کلاسز</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AI LEARNING COURSE MODULES SECTION -->
+    <section id="modules" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-brand-ice text-brand-blue font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full mb-3">
+                    خصوصی پریکٹیکل نصاب • یکم دسمبر بیچ
+                </span>
+                <h2 class="font-nastaliq text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-navy">
+                    <span class="font-en text-brand-blue">AI</span> لرننگ کورس — آپ کیا سیکھیں گے؟
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg mt-3 leading-relaxed">
+                    بغیر کسی تکنیکی یا کوڈنگ کے پیشگی تجربے کے، صفر سے لے کر جدید AI ٹولز تک عملی مہارت حاصل کریں۔
+                </p>
+            </div>
+
+            <!-- 5 Core Practical Modules Grid (Matching Haytham Academy Poster) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+                
+                <!-- Module 1 -->
+                <div class="group bg-brand-sky/70 hover:bg-white rounded-3xl p-7 border border-slate-200/80 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition-all">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-blue text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-en text-xs font-bold uppercase tracking-wider text-brand-blue bg-white px-3 py-1 rounded-full border border-slate-200">01 • Basics of AI</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy mb-2">AI کی بنیادی باتیں</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        مصنوعی ذہانت کیا ہے، ChatGPT اور جدید AI اسسٹنٹس کو درست اردو اور انگریزی پرامپٹس (Prompts) کے ذریعے روزمرہ تعلیم، تحریر اور کاروبار میں کیسے استعمال کریں۔
+                    </p>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="group bg-brand-sky/70 hover:bg-white rounded-3xl p-7 border border-slate-200/80 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition-all">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500 text-brand-navy flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-en text-xs font-bold uppercase tracking-wider text-brand-blue bg-white px-3 py-1 rounded-full border border-slate-200">02 • Creating Pictures</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy mb-2">تصاویر بنانا</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        AI کے ذریعے شاندار پوسٹرز، یوٹیوب تھمب نیلز، اسلامی و تعلیمی گرافکس، لوگو اور پروفیشنل آرٹ ورک منٹوں میں تیار کرنے کا عملی طریقہ۔
+                    </p>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="group bg-brand-sky/70 hover:bg-white rounded-3xl p-7 border border-slate-200/80 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition-all">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-en text-xs font-bold uppercase tracking-wider text-brand-blue bg-white px-3 py-1 rounded-full border border-slate-200">03 • Videos</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy mb-2">ویڈیوز بنانا</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ٹیکسٹ اور تصاویر سے متحرک AI ویڈیوز، اردو وائس اوور، اینیمیشن اور یوٹیوب و سوشل میڈیا کے لیے دلکش ویڈیو کنٹینٹ بنانا سیکھیں۔
+                    </p>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="group bg-brand-sky/70 hover:bg-white rounded-3xl p-7 border border-slate-200/80 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition-all">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                        </div>
+                        <span class="font-en text-xs font-bold uppercase tracking-wider text-brand-blue bg-white px-3 py-1 rounded-full border border-slate-200">04 • Webpages</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy mb-2">ویب پیجز بنانا</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        AI کی مدد سے جدید، خوبصورت اور موبائل فرینڈلی ویب پیجز، لینڈنگ پیجز اور تعلیمی یا کاروباری ویب سائٹس ڈیزائن اور پبلش کرنا سیکھیں۔
+                    </p>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="group bg-brand-sky/70 hover:bg-white rounded-3xl p-7 border border-slate-200/80 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition-all">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-rose-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-en text-xs font-bold uppercase tracking-wider text-brand-blue bg-white px-3 py-1 rounded-full border border-slate-200">05 • Games</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy mb-2">گیمز بنانا</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        بچوں اور نوجوانوں کی تخلیقی صلاحیتوں کو نکھارنے کے لیے AI ٹولز کے ذریعے دلچسپ اور انٹرایکٹو براؤزر گیمز خود بنانا اور دوستوں کے ساتھ شیئر کرنا۔
+                    </p>
+                </div>
+
+                <!-- Bonus Card: Final Practical Project & Certificate -->
+                <div class="bg-gradient-to-br from-brand-navy to-brand-blue text-white rounded-3xl p-7 shadow-soft flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -left-8 -bottom-8 w-36 h-36 bg-brand-amber/20 rounded-full blur-xl"></div>
+                    <div>
+                        <span class="inline-block bg-brand-amber text-brand-navy text-xs font-extrabold px-3 py-1 rounded-full mb-4">
+                            خصوصی سرٹیفکیٹ اور پورٹ فولیو
+                        </span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold mb-2">عملی پروجیکٹس اور رہنمائی</h3>
+                        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                            کورس کے اختتام پر ہر طالب علم اپنا ذاتی AI پورٹ فولیو (تصاویر، ویڈیو، ویب پیج اور گیم) مکمل کرے گا اور ہیتھم اکیڈمی کی جانب سے سرٹیفکیٹ حاصل کرے گا۔
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openRegModal('AI لرننگ کورس - یکم دسمبر بیچ')" class="w-full bg-white text-brand-navy hover:bg-brand-gold font-extrabold py-3 px-5 rounded-full transition text-sm sm:text-base cursor-pointer">
+                            اپنی سیٹ ابھی محفوظ کریں ←
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Schedule & 50% Early Bird Banner (Matching Poster Details) -->
+            <div class="bg-brand-sky rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-card">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 border-b border-slate-200">
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-1.5 h-12 bg-brand-amber rounded-full shrink-0 mt-1"></div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">کلاسز کا آغاز (Start Date)</span>
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-blue mt-0.5">یکم دسمبر</div>
+                            <span class="text-xs text-slate-500 font-en">1st December</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-1.5 h-12 bg-brand-amber rounded-full shrink-0 mt-1"></div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">تربیتی دورانیہ (Duration)</span>
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-navy mt-0.5">4 سے 6 ہفتے</div>
+                            <span class="text-xs text-slate-500 font-en">4–6 Weeks Practical</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-1.5 h-12 bg-brand-amber rounded-full shrink-0 mt-1"></div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">لیکچر ٹائمنگ (Lecture Timing)</span>
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-navy mt-0.5">2 گھنٹے</div>
+                            <span class="text-xs text-slate-500 font-en">2 Hours Interactive Class</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-1.5 h-12 bg-brand-amber rounded-full shrink-0 mt-1"></div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">اہلیت (Eligibility)</span>
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-navy mt-0.5">عمر کی کوئی پابندی نہیں</div>
+                            <span class="text-xs text-slate-500 font-en">No Age Limit (All Ages)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 50% Discount Navy Strip matching Poster -->
+                <div class="mt-8 bg-brand-navy rounded-2xl p-5 sm:p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5">
+                    <div class="flex items-center gap-4 text-center md:text-right">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-amber text-brand-navy flex flex-col items-center justify-center shrink-0 shadow-lg font-en">
+                            <span class="text-2xl sm:text-3xl font-extrabold leading-none">50%</span>
+                            <span class="text-xs font-extrabold uppercase mt-0.5">OFF</span>
+                        </div>
+                        <div>
+                            <h3 class="font-nastaliq text-xl sm:text-2xl lg:text-3xl text-brand-gold font-bold">
+                                پہلے 10 سٹوڈنٹس کے لیے 50% خصوصی ڈسکاؤنٹ
+                            </h3>
+                            <p class="text-slate-300 text-xs sm:text-sm mt-1">
+                                عمر کی کوئی پابندی نہیں — سکول، کالج، یونیورسٹی کے طلبہ، اساتذہ اور کاروباری افراد سبھی داخلہ لے سکتے ہیں۔
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="openRegModal('50% ڈسکاؤنٹ آفر - پہلے 10 سٹوڈنٹس')" class="w-full md:w-auto shrink-0 bg-brand-amber hover:bg-brand-gold text-brand-navy font-extrabold px-7 py-3.5 rounded-full shadow-glow transition cursor-pointer text-sm sm:text-base">
+                        50% ڈسکاؤنٹ حاصل کریں
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HOW WE TEACH SECTION (Matching onlineaischool.com pedagogical ethos) -->
+    <section id="how-we-teach" class="py-16 lg:py-20 bg-brand-sky/80 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block bg-white text-brand-blue font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-sm mb-3">
+                    ہمارا طریقہ تدریس
+                </span>
+                <h2 class="font-nastaliq text-3xl sm:text-4xl font-bold text-brand-navy">
+                    ہم کیسے سکھاتے ہیں؟
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg mt-2">
+                    انگریزی کی مشکل اصطلاحات کے بجائے خالص اور آسان اردو زبان میں قدم بہ قدم عملی تربیت
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-3xl p-7 shadow-card border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-brand-blue font-en font-extrabold text-xl flex items-center justify-center mb-5">01</div>
+                    <h3 class="text-xl font-extrabold text-brand-navy mb-2">آسان اردو زبان میں شرح</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ہر AI ٹول اور کانسیپٹ کو سادہ اردو میں سمجھایا جاتا ہے تاکہ ہر عمر اور ہر تعلیمی پس منظر کا طالب علم آسانی سے سیکھ سکے۔
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-7 shadow-card border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 font-en font-extrabold text-xl flex items-center justify-center mb-5">02</div>
+                    <h3 class="text-xl font-extrabold text-brand-navy mb-2">100% عملی (Practical) کلاسز</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        صرف تھیوری نہیں بلکہ کلاس کے دوران ہی طلبہ خود تصاویر، ویڈیوز، ویب پیجز اور گیمز تخلیق کرتے ہیں اور اساتذہ براہِ راست رہنمائی کرتے ہیں۔
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-7 shadow-card border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 font-en font-extrabold text-xl flex items-center justify-center mb-5">03</div>
+                    <h3 class="text-xl font-extrabold text-brand-navy mb-2">ریکارڈڈ بیک اپ اور کمیونٹی سپورٹ</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        کلاس کے بعد واٹس ایپ گروپ اور یوٹیوب چینل پر رہنمائی دستیاب رہتی ہے تاکہ کسی بھی مرحلے پر آپ کو کوئی مشکل پیش نہ آئے۔
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YOUTUBE & SOCIAL LEARNING HUB SECTION -->
+    <section id="channels" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-red-50 text-red-600 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full mb-3">
+                    مفت تعلیمی ویڈیوز اور کمیونٹی
+                </span>
+                <h2 class="font-nastaliq text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-navy">
+                    ہمارے یوٹیوب چینلز اور سوشل میڈیا
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg mt-3">
+                    مفت AI ٹیوٹوریلز، کورس اپڈیٹس اور طلبہ کے تخلیقی پروجیکٹس دیکھنے کے لیے ہمارے آفیشل چینلز کو سبسکرائب اور فالو کریں۔
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+                
+                <!-- Card 1: NEW CHANNEL @AIUrduUstaad (Featured) -->
+                <div class="relative bg-gradient-to-b from-brand-sky to-white rounded-3xl p-7 border-2 border-brand-amber shadow-soft flex flex-col justify-between">
+                    <div class="absolute -top-3.5 right-6 bg-brand-amber text-brand-navy text-xs font-extrabold px-3.5 py-1 rounded-full shadow">
+                        نیا آفیشل چینل • New Launch
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-5 mt-2">
+                            <div class="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-md shrink-0">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-brand-navy font-en" dir="ltr">AI Urdu Ustaad</h3>
+                                <span class="text-xs font-en text-slate-500 block" dir="ltr">@AIUrduUstaad</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            <strong>AI اردو اُستاد</strong> کا نیا خصوصی یوٹیوب چینل! جہاں آپ کو ملیں گے مفت AI ٹیوٹوریلز، شارٹ کلپس، پرامپٹ ٹرکس اور آسان اردو میں مکمل رہنمائی۔
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/@AIUrduUstaad" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-5 rounded-full shadow-md transition">
+                        <span>یوٹیوب چینل سبسکرائب کریں</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: Haytham Academy YouTube Channel -->
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-navy text-white flex items-center justify-center shadow-md shrink-0">
+                                <svg class="w-8 h-8 text-brand-amber" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-brand-navy font-en" dir="ltr">Haytham Academy</h3>
+                                <span class="text-xs font-en text-slate-500 block" dir="ltr">youtube.com/c/haythamacademy</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            ہیتھم اکیڈمی کا مرکزی تعلیمی یوٹیوب چینل — تعلیمی لیکچرز، سکل ڈویلپمنٹ، ای کامرس اور نئے کورسز کی مکمل تفصیلات کے لیے وزٹ کریں۔
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/c/haythamacademy" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-blue text-white font-bold py-3.5 px-5 rounded-full transition">
+                        <span>ہیتھم اکیڈمی چینل دیکھیں</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Haytham Academy Pasrur Facebook Page -->
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 hover:border-brand-blue/40 shadow-card hover:shadow-soft transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-[#1877F2] text-white flex items-center justify-center shadow-md shrink-0">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-brand-navy font-en" dir="ltr">Haytham Academy Pasrur</h3>
+                                <span class="text-xs font-en text-slate-500 block" dir="ltr">facebook.com/haythamacademypasrur</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            ہیتھم اکیڈمی پسرور کے آفیشل فیس بک پیج پر روزانہ تعلیمی اپڈیٹس، کلاسز کے اوقات، سٹوڈنٹس کے پروجیکٹس اور داخلہ معلومات حاصل کریں۔
+                        </p>
+                    </div>
+                    <a href="https://www.facebook.com/haythamacademypasrur" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-blue-700 text-white font-bold py-3.5 px-5 rounded-full transition">
+                        <span>فیس بک پیج فالو کریں</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING E-COMMERCE COURSES SECTION (01 to 06 matching Poster) -->
+    <section id="ecommerce" class="py-16 lg:py-24 bg-brand-sky border-t border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header Row -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-brand-navy text-brand-gold text-xs font-en font-extrabold px-4 py-1.5 rounded-full mb-3 tracking-wider uppercase">
+                        COMING SOON • جلد آرہے ہیں
+                    </div>
+                    <h2 class="font-nastaliq text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-navy">
+                        ای کامرس کورسز (<span class="font-en text-brand-blue">E-commerce Courses</span>)
+                    </h2>
+                </div>
+                <p class="text-slate-600 text-sm sm:text-base max-w-md">
+                    ہیتھم اکیڈمی پسرور میں جلد شروع ہونے والے پریکٹیکل ای کامرس کورسز — پیشگی معلومات یا ویٹ لسٹ کے لیے رابطہ کریں۔
+                </p>
+            </div>
+
+            <!-- 6-Card Grid (01 to 06 matching reference poster) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 01 Amazon -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                01
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Global Marketplace</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            ایمازون <span class="font-en text-brand-blue text-lg font-bold">(Amazon)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            عالمی مارکیٹ پلیس (Global Marketplace) پر پراڈکٹ ہنٹنگ، سورسنگ اور اکاؤنٹ مینجمنٹ۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: Amazon')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+                <!-- 02 eBay -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                02
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Listings & Orders</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            ای بے <span class="font-en text-brand-blue text-lg font-bold">(eBay)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            لسٹنگز اور آرڈرز (Listings & Orders) کی مکمل ترتیب، کسٹمر سروس اور بین الاقوامی فروخت۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: eBay')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+                <!-- 03 TikTok Shop -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                03
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Social Commerce</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            ٹک ٹاک شاپ <span class="font-en text-brand-blue text-lg font-bold">(TikTok Shop)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            سوشل کامرس (Social Commerce) اور شارٹ ویڈیوز کے ذریعے تیزی سے پراڈکٹس فروخت کرنے کا ہنر۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: TikTok Shop')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+                <!-- 04 Shopify -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                04
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Your Own Online Store</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            شاپی فائی <span class="font-en text-brand-blue text-lg font-bold">(Shopify)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            اپنا ذاتی آن لائن سٹور (Your Own Online Store) بنانا، برانڈنگ اور ڈیجیٹل مارکیٹنگ۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: Shopify')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+                <!-- 05 Daraz -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                05
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Pakistan's Marketplace</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            دراز <span class="font-en text-brand-blue text-lg font-bold">(Daraz)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            پاکستان کی سب سے بڑی مارکیٹ پلیس (Pakistan's Marketplace) پر سیلر اکاؤنٹ اور روزانہ آرڈرز حاصل کرنا۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: Daraz')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+                <!-- 06 Local E-commerce -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-slate-200/90 hover:border-brand-navy transition shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-2 font-en font-extrabold text-sm text-brand-navy">
+                                <span class="w-4 h-1.5 bg-brand-amber rounded-full inline-block"></span>
+                                06
+                            </span>
+                            <span class="text-xs font-semibold text-slate-400 font-en">Sell to Local Buyers</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy">
+                            لوکل ای کامرس <span class="font-en text-brand-blue text-lg font-bold">(Local E-commerce)</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-2">
+                            مقامی خریداروں کو فروخت کریں (Sell to Local Buyers) — کیش آن ڈیلیوری اور سوشل میڈیا سیلز۔
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">جلد آغاز</span>
+                        <button onclick="openRegModal('ای کامرس کورس: Local E-commerce')" class="text-xs sm:text-sm font-bold text-brand-blue hover:underline cursor-pointer">معلومات لیں ←</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTORS & DIRECT WHATSAPP REGISTRATION SECTION -->
+    <section id="instructors" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Right Column: Instructors & Academy Contact Card (6 cols) -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="inline-block bg-brand-ice text-brand-blue font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full mb-3">
+                            ہیتھم اکیڈمی پسرور • ماہر اساتذہ
+                        </span>
+                        <h2 class="font-nastaliq text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-navy">
+                            ماہر اساتذہ اور براہِ راست رابطہ
+                        </h2>
+                        <p class="text-slate-600 text-base sm:text-lg mt-2 leading-relaxed">
+                            تجربہ کار اساتذہ کی براہِ راست نگرانی میں جدید AI سکلز سیکھیں۔ داخلے اور مزید معلومات کے لیے آج ہی رابطہ کریں۔
+                        </p>
+                    </div>
+
+                    <!-- Instructors Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-brand-sky rounded-3xl p-6 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-brand-navy text-brand-gold font-bold text-lg flex items-center justify-center shrink-0">
+                                    ر
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-brand-blue block">انسٹرکٹر • Instructor</span>
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-brand-navy">رانا محمد رضوان</h3>
+                                </div>
+                            </div>
+                            <p class="text-xs font-en font-semibold text-slate-500">Rana Muhammad Rizwan</p>
+                        </div>
+
+                        <div class="bg-brand-sky rounded-3xl p-6 border border-slate-200/80">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-12 h-12 rounded-2xl bg-brand-blue text-white font-bold text-lg flex items-center justify-center shrink-0">
+                                    ع
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-brand-blue block">انسٹرکٹر • Instructor</span>
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-brand-navy">رانا محمد عثمان</h3>
+                                </div>
+                            </div>
+                            <p class="text-xs font-en font-semibold text-slate-500">Rana Muhammad Usman</p>
+                        </div>
+                    </div>
+
+                    <!-- Golden Call / WhatsApp Box matching Poster -->
+                    <div class="bg-gradient-to-br from-brand-amber to-brand-gold rounded-3xl p-6 sm:p-8 text-brand-navy shadow-glow border-2 border-brand-navy relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-brand-navy/20">
+                            <div>
+                                <span class="text-xs font-en font-extrabold uppercase tracking-wider text-brand-navy/80 block">CALL / WHATSAPP • کال یا واٹس ایپ</span>
+                                <a href="tel:03217181315" class="text-3xl sm:text-4xl font-en font-extrabold text-brand-navy tracking-tight mt-1 inline-block" dir="ltr">
+                                    0321-7181315
+                                </a>
+                            </div>
+                            <a href="https://wa.me/923217181315?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%DB%8C%DA%BA%20AI%20%D8%A7%D8%B1%D8%AF%D9%88%20%D8%A7%D9%8F%D8%B3%D8%AA%D8%A7%D8%AF%20(%DB%81%DB%8C%D8%AA%DA%BE%D9%85%20%D8%A7%DA%A9%DB%8C%DA%88%D9%85%DB%8C%20%D9%BE%D8%B3%D8%B1%D9%88%D8%B1)%20%DA%A9%DB%92%20%DB%8C%DA%A9%D9%85%20%D8%AF%D8%B3%D9%85%D8%A8%D8%B1%20AI%20%D9%84%D8%B1%D9%86%D9%86%DA%AF%20%DA%A9%D9%88%D8%B1%D8%B3%20%D9%85%DB%8C%DA%BA%20%D8%B1%D8%AC%D8%B3%D9%B9%D8%B1%DB%8C%D8%B4%D9%86%20%DA%A9%D8%B1%D9%88%D8%A7%D9%86%D8%A7%20%DA%86%D8%A7%DB%81%D8%AA%D8%A7/%DA%86%D8%A7%DB%81%D8%AA%DB%8C%20%DB%81%D9%88%DA%BA%DB%94" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-slate-800 text-white font-bold px-5 py-3.5 rounded-2xl shadow-md transition text-sm">
+                                <span>براہِ راست واٹس ایپ میسج</span>
+                            </a>
+                        </div>
+                        <div class="pt-4 space-y-1.5 text-xs sm:text-sm font-bold text-brand-navy/90">
+                            <div>📍 مقام: ہیتھم اکیڈمی، پسرور (Haytham Academy, Pasrur)</div>
+                            <div class="font-en" dir="ltr">YouTube: youtube.com/@AIUrduUstaad | youtube.com/c/haythamacademy</div>
+                            <div class="font-en" dir="ltr">Facebook: facebook.com/haythamacademypasrur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Column: Interactive Quick Registration Form (6 cols) -->
+                <div class="lg:col-span-6">
+                    <div class="bg-brand-sky rounded-3xl p-6 sm:p-9 border border-slate-200 shadow-soft">
+                        <div class="mb-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3.5 py-1 rounded-full mb-2">
+                                یکم دسمبر بیچ • 50% ڈسکاؤنٹ فارم
+                            </span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">آن لائن فوری رجسٹریشن فارم</h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                نیچے دی گئی معلومات پُر کریں اور ایک کلک میں اپنی درخواست براہِ راست واٹس ایپ پر بھیجیں۔
+                            </p>
+                        </div>
+
+                        <form id="quick-reg-form" class="space-y-4">
+                            <div>
+                                <label for="student-name" class="block text-sm font-bold text-slate-800 mb-1.5">طالب علم / امیدوار کا پورا نام *</label>
+                                <input type="text" id="student-name" required placeholder="مثال: احمد علی" class="w-full px-4 py-3.5 rounded-2xl bg-white border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-slate-900">
+                            </div>
+
+                            <div>
+                                <label for="student-phone" class="block text-sm font-bold text-slate-800 mb-1.5">واٹس ایپ / موبائل نمبر *</label>
+                                <input type="tel" id="student-phone" required placeholder="0300-1234567" dir="ltr" class="w-full px-4 py-3.5 rounded-2xl bg-white border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-slate-900 text-right font-en">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="age-group" class="block text-sm font-bold text-slate-800 mb-1.5">عمر کی کیٹیگری (عمر کی کوئی قید نہیں)</label>
+                                    <select id="age-group" class="w-full px-4 py-3.5 rounded-2xl bg-white border border-slate-300 focus:border-brand-blue outline-none text-slate-900">
+                                        <option value="سکول سٹوڈنٹ (10 سے 16 سال)">سکول سٹوڈنٹ (10 سے 16 سال)</option>
+                                        <option value="کالج / یونیورسٹی سٹوڈنٹ" selected>کالج / یونیورسٹی سٹوڈنٹ</option>
+                                        <option value="ٹیچر / پروفیشنل">ٹیچر / پروفیشنل</option>
+                                        <option value="کاروباری فرد / والدین">کاروباری فرد / والدین</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="course-select" class="block text-sm font-bold text-slate-800 mb-1.5">مطلوبہ کورس منتخب کریں</label>
+                                    <select id="course-select" class="w-full px-4 py-3.5 rounded-2xl bg-white border border-slate-300 focus:border-brand-blue outline-none text-slate-900">
+                                        <option value="AI لرننگ کورس (یکم دسمبر بیچ - 50% ڈسکاؤنٹ)">AI لرننگ کورس (یکم دسمبر بیچ)</option>
+                                        <option value="ای کامرس ویٹ لسٹ: Amazon / eBay">ای کامرس: Amazon / eBay</option>
+                                        <option value="ای کامرس ویٹ لسٹ: TikTok Shop / Shopify">ای کامرس: TikTok Shop / Shopify</option>
+                                        <option value="ای کامرس ویٹ لسٹ: Daraz / Local E-commerce">ای کامرس: Daraz / Local</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full mt-2 bg-brand-navy hover:bg-brand-blue text-white font-extrabold text-base sm:text-lg py-4 px-6 rounded-full shadow-soft transition-all flex items-center justify-center gap-3 cursor-pointer">
+                                <span>واٹس ایپ پر رجسٹریشن مکمل کریں</span>
+                                <svg class="w-5 h-5 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 lg:py-20 bg-brand-sky/70 border-t border-slate-200/70">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-white text-brand-blue font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-sm mb-3">
+                    اکثر پوچھے گئے سوالات
+                </span>
+                <h2 class="font-nastaliq text-3xl sm:text-4xl font-bold text-brand-navy">
+                    آپ کے سوالات اور ان کے جوابات
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm" open>
+                    <summary class="flex items-center justify-between font-extrabold text-base sm:text-lg text-brand-navy cursor-pointer list-none">
+                        <span>کیا اس AI کورس کے لیے عمر یا تعلیم کی کوئی شرط ہے؟</span>
+                        <span class="text-brand-blue font-en text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+                        جی نہیں! اس کورس میں عمر کی کوئی پابندی نہیں (No Age Limit)۔ سکول کے بچوں سے لے کر کالج و یونیورسٹی کے طلبہ، اساتذہ، خواتین اور کاروباری حضرات تک ہر کوئی آسان اردو زبان میں سیکھ سکتا ہے۔
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+                    <summary class="flex items-center justify-between font-extrabold text-base sm:text-lg text-brand-navy cursor-pointer list-none">
+                        <span>نئی کلاسز کب سے شروع ہو رہی ہیں اور دورانیہ کیا ہے؟</span>
+                        <span class="text-brand-blue font-en text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+                        نئے بیچ کا باقاعدہ آغاز <strong>یکم دسمبر</strong> سے ہو رہا ہے، جبکہ رجسٹریشن ابھی سے جاری ہے۔ کورس کا دورانیہ 4 سے 6 ہفتے ہے اور روزانہ لیکچر کا وقت 2 گھنٹے ہے۔
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+                    <summary class="flex items-center justify-between font-extrabold text-base sm:text-lg text-brand-navy cursor-pointer list-none">
+                        <span>50% خصوصی ڈسکاؤنٹ کیسے حاصل کیا جا سکتا ہے؟</span>
+                        <span class="text-brand-blue font-en text-xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+                        پہلے رجسٹریشن کروانے والے <strong>10 سٹوڈنٹس</strong> کو فیس میں <strong>50% خصوصی رعایت</strong> دی جا رہی ہے۔ اپنی سیٹ کنفرم کرنے کے لیے ابھی فارم پُر کریں یا <span class="font-en font-bold" dir="ltr">0321-7181315</span> پر واٹس ایپ کریں۔
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLEAN FOOTER -->
+    <footer class="bg-brand-navy text-white pt-14 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+                
+                <!-- Brand Column -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-brand-amber text-brand-navy font-en font-extrabold text-xl flex items-center justify-center">
+                            H
+                        </div>
+                        <div>
+                            <div class="text-xl font-extrabold text-white">AI <span class="text-brand-gold">اردو اُستاد</span></div>
+                            <div class="text-xs text-slate-400">ہیتھم اکیڈمی پسرور • <span class="font-en">Haytham Academy Pasrur</span></div>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed max-w-md">
+                        پاکستان کے طلبہ اور نوجوانوں کو آسان اردو زبان میں مصنوعی ذہانت (AI) اور جدید ڈیجیٹل مہارتوں سے آراستہ کرنے کا تعلیمی مشن۔
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-3 space-y-2.5">
+                    <h4 class="text-sm font-extrabold text-brand-gold uppercase tracking-wider mb-3">فوری روابط</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="#modules" class="hover:text-white transition">AI لرننگ کورس ماڈیولز</a></li>
+                        <li><a href="#how-we-teach" class="hover:text-white transition">ہمارا طریقہ تدریس</a></li>
+                        <li><a href="#ecommerce" class="hover:text-white transition">ای کامرس کورسز (جلد آرہے ہیں)</a></li>
+                        <li><a href="#instructors" class="hover:text-white transition">اساتذہ اور رجسٹریشن</a></li>
+                    </ul>
+                </div>
+
+                <!-- Official Social & YouTube Links -->
+                <div class="md:col-span-4 space-y-2.5">
+                    <h4 class="text-sm font-extrabold text-brand-gold uppercase tracking-wider mb-3">آفیشل چینلز اور رابطہ</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li>
+                            <a href="https://www.youtube.com/@AIUrduUstaad" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition flex items-center gap-2">
+                                <span class="text-red-500">▶</span>
+                                <span>یوٹیوب (نیا چینل): <span class="font-en" dir="ltr">@AIUrduUstaad</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/haythamacademy" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition flex items-center gap-2">
+                                <span class="text-red-500">▶</span>
+                                <span>یوٹیوب (اکیڈمی): <span class="font-en" dir="ltr">Haytham Academy</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/haythamacademypasrur" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition flex items-center gap-2">
+                                <span class="text-blue-400">●</span>
+                                <span>فیس بک پیج: <span class="font-en" dir="ltr">Haytham Academy Pasrur</span></span>
+                            </a>
+                        </li>
+                        <li class="pt-1 text-brand-amber font-bold font-en" dir="ltr">
+                            📞 Call / WhatsApp: 0321-7181315
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>© 2026 AI اردو اُستاد — ہیتھم اکیڈمی پسرور (Haytham Academy Pasrur). جملہ حقوق محفوظ ہیں۔</p>
+                <p>نیا بیچ: یکم دسمبر • رجسٹریشن جاری ہے</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE REGISTRATION MODAL -->
+    <div id="reg-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-fadeIn">
+            <button onclick="closeRegModal()" aria-label="بند کریں" class="absolute top-5 left-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-en font-bold cursor-pointer">
+                ✕
+            </button>
+
+            <span class="inline-block bg-brand-amber/20 text-brand-navy text-xs font-extrabold px-3 py-1 rounded-full mb-2">
+                یکم دسمبر بیچ • 50% خصوصی رعایت
+            </span>
+            <h3 class="text-2xl font-extrabold text-brand-navy">فوری رجسٹریشن کروائیں</h3>
+            <p class="text-slate-600 text-sm mt-1 mb-5">
+                اپنا نام اور نمبر درج کریں، آپ کی درخواست براہِ راست ہیتھم اکیڈمی کے آفیشل واٹس ایپ (<span class="font-en font-bold" dir="ltr">0321-7181315</span>) پر کھل جائے گی۔
+            </p>
+
+            <form id="modal-reg-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">آپ کا نام *</label>
+                    <input type="text" id="modal-name" required placeholder="اپنا نام لکھیں" class="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-300 focus:border-brand-blue outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">واٹس ایپ نمبر *</label>
+                    <input type="tel" id="modal-phone" required placeholder="0321-0000000" dir="ltr" class="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-300 focus:border-brand-blue outline-none text-right font-en">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">منتخب کردہ کورس</label>
+                    <input type="text" id="modal-course" readonly class="w-full px-4 py-3 rounded-2xl bg-brand-ice border border-brand-blue/20 text-brand-navy font-bold text-sm">
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-l from-brand-amber to-brand-gold text-brand-navy font-extrabold py-3.5 rounded-full shadow-glow hover:opacity-95 transition cursor-pointer">
+                    واٹس ایپ پر درخواست بھیجیں ←
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CUSTOM CONFIRMATION TOAST (No alert() used) -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-brand-navy text-white px-5 py-4 rounded-2xl shadow-2xl border border-brand-amber/40 flex items-center gap-3">
+        <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 font-bold">✓</span>
+        <div class="text-sm">
+            <div class="font-bold text-brand-gold">رجسٹریشن پیغام تیار ہو گیا!</div>
+            <div class="text-slate-200 text-xs mt-0.5">ہیتھم اکیڈمی واٹس ایپ چیٹ کھولی جا رہی ہے۔</div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Registration Modal Controls
+        const regModal = document.getElementById('reg-modal');
+        const modalCourseInput = document.getElementById('modal-course');
+
+        function openRegModal(courseName) {
+            modalCourseInput.value = courseName || 'AI لرننگ کورس (یکم دسمبر بیچ)';
+            regModal.classList.remove('hidden');
+            regModal.classList.add('flex');
+        }
+
+        function closeRegModal() {
+            regModal.classList.add('hidden');
+            regModal.classList.remove('flex');
+        }
+
+        // Close modal on outside click
+        regModal.addEventListener('click', (e) => {
+            if (e.target === regModal) {
+                closeRegModal();
+            }
+        });
+
+        // Show Custom Toast Notification
+        function showToast() {
+            const toast = document.getElementById('toast-notification');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4500);
+        }
+
+        // Generate & Open Pre-filled WhatsApp Enrollment Message
+        function sendToWhatsApp(name, phone, course, ageGroup = '') {
+            const academyNumber = '923217181315';
+            let message = `السلام علیکم! میں *AI اردو اُستاد (ہیتھم اکیڈمی پسرور)* میں رجسٹریشن کروانا چاہتا/چاہتی ہوں:\n\n`;
+            message += `👤 *نام:* ${name}\n`;
+            message += `📱 *رابطہ نمبر:* ${phone}\n`;
+            message += `📚 *کورس:* ${course}\n`;
+            if (ageGroup) {
+                message += `🎯 *کیٹیگری:* ${ageGroup}\n`;
+            }
+            message += `📅 *بیچ:* یکم دسمبر (50% ابتدائی ڈسکاؤنٹ آفر)`;
+
+            const encodedText = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${academyNumber}?text=${encodedText}`;
+
+            showToast();
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Handle Main Quick Registration Form
+        document.getElementById('quick-reg-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('student-name').value.trim();
+            const phone = document.getElementById('student-phone').value.trim();
+            const ageGroup = document.getElementById('age-group').value;
+            const course = document.getElementById('course-select').value;
+
+            if (name && phone) {
+                sendToWhatsApp(name, phone, course, ageGroup);
+            }
+        });
+
+        // Handle Modal Registration Form
+        document.getElementById('modal-reg-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('modal-name').value.trim();
+            const phone = document.getElementById('modal-phone').value.trim();
+            const course = document.getElementById('modal-course').value;
+
+            if (name && phone) {
+                closeRegModal();
+                sendToWhatsApp(name, phone, course);
+            }
+        });
+    </script>
+</body>
+</html>
